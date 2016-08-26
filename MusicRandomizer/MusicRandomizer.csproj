@@ -64,6 +64,7 @@
     <Compile Include="ImportForm.Designer.cs">
       <DependentUpon>ImportForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MemAreas.cs" />
     <Compile Include="MusicFile.cs" />
     <Compile Include="PlaylistNameForm.cs">
       <SubType>Form</SubType>
@@ -81,6 +82,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SplatoonRegion.cs" />
+    <Compile Include="tcpconn.cs" />
+    <Compile Include="TCPGecko.cs" />
     <Compile Include="TrackType.cs" />
     <Compile Include="UpdateChecker.cs" />
     <Compile Include="RegionForm.cs">
