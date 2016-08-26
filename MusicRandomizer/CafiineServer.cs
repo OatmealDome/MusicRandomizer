@@ -110,8 +110,9 @@ namespace MusicRandomizer
                     bool isSplatoon = false;
                     var titleId = ids[0].ToString("X8") + "-" + ids[1].ToString("X8");
 
-                    // North America, Europe, Japan
-                    if (titleId.Equals("00050000-10176900") || titleId.Equals("00050000-10176A00") || titleId.Equals("00050000-10162B00"))
+                    // North America, Europe, Japan, Testfire Europe, Testfire Japan, Testfire North America
+                    if (titleId.Equals("00050000-10176900") || titleId.Equals("00050000-10176A00") || titleId.Equals("00050000-10162B00")
+                        || titleId.Equals("00050000-101D6A00") || titleId.Equals("00050000-101D6B00") || titleId.Equals("00050000-101D6C00"))
                     {
                         isSplatoon = true;
                     }
@@ -141,6 +142,7 @@ namespace MusicRandomizer
                                     string mode = reader.ReadString(Encoding.ASCII, len_mode - 1);
                                     if (reader.ReadByte() != 0) throw new InvalidDataException();
 
+                                    //Log(LogType.Info, name + " " + path);
                                     String localPath = "cafiine_root\\" + titleId + path;
                                     if (isSplatoon && path.Contains(".bfstm"))
                                     {
